@@ -17,14 +17,14 @@ import math
 
 def main():
     print("This program computes the RMS Average, Harmonic Mean, and Geometric Mean respectively")
-    number_of_values = int(input("enter the values to be entered: " ))
+    number_of_values = eval(input("enter the values to be entered: " ))
     sum = 0
+    geometric = 1
     for n in range(number_of_values):
-        print("enter value", n + 1, ":" )
-        value = int(input())
+        value = eval(input("enter value: "))
         sum = sum + value
-    average = sum / number_of_values
-    rms = round(math.sqrt(sum + value**2), 3)
+        sum_rms = values ** 2
+    rms = round(math.sqrt(sum_rms), 3)
     print(rms)
     harmonic_mean = 1 / (number_of_values/sum)
     print(harmonic_mean)
