@@ -24,7 +24,7 @@ def main():
         value = eval(input("enter value: "))
         sum = sum + value
         sum_rms = values ** 2
-    rms = round(math.sqrt(sum_rms), 3)
+    rms = round(math.sqrt(rms accumulator), 3)
     print(rms)
     harmonic_mean = 1 / (number_of_values/sum)
     print(harmonic_mean)

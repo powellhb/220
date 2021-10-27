@@ -30,12 +30,18 @@ def main():
 
     win.getMouse()
 
-    #undraw button
+    # undraw button
+    encode_button.undraw()
+    button_outline.undraw()
     encode_button.undraw()
     button_outline.undraw()
 
+    a = message_input.getText()
+    b = keyword_input.getText()
+
     #output
     output.setText("RESULTING MESSAGE")
+    code(a, b)
     win.getMouse()
 
     end_message = Text(Point(5, 1), "Click anywhere to quit")
