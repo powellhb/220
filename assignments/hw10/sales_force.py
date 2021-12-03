@@ -17,7 +17,7 @@ class SalesForce:
 
     def add_data(self, file_name):
         n_file = open(file_name, "r")
-        lines = n_file.readlines
+        lines = n_file.readlines()
         for i in range(len(lines)):
             fields = lines[i].split(',')
             person = SalesPerson(int(fields[0]), fields[1])
@@ -47,7 +47,7 @@ class SalesForce:
 
     def individual_sales(self, employee_id):
         for person in self.sales_people:
-            if person.get_id == id:
+            if person.get_id() == employee_id:
                 return person
         return None
 
