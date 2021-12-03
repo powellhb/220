@@ -16,20 +16,21 @@ I certify that this assignment is entirely my own work.
 import math
 
 def main():
-    print("This program computes the RMS Average, Harmonic Mean, and Geometric Mean respectively")
     number_of_values = eval(input("enter the values to be entered: " ))
-    sum = 0
+    sum_rms = 0
+    sum_harmonic = 0
     geometric = 1
     for n in range(number_of_values):
         value = eval(input("enter value: "))
-        sum = sum + value
-        sum_rms = values ** 2
-    rms = round(math.sqrt(rms accumulator), 3)
-    print(rms)
-    harmonic_mean = 1 / (number_of_values/sum)
-    print(harmonic_mean)
-    geometric_mean = round((value)**(1/number_of_values), 3)
-    print(geometric_mean)
+        sum_rms = sum_rms + (value ** 2)
+        sum_harmonic = sum_harmonic + (1 / value)
+        geometric = geometric * value
+    rms_avg = round(math.sqrt(sum_rms/number_of_values), 3)
+    print(rms_avg)
+    harmonic_avg = number_of_values / sum_harmonic
+    print(harmonic_avg)
+    geometric_avg = round((geometric)**(1/number_of_values), 3)
+    print(geometric_avg)
 
 if __name__ == '__main__':
     main()
